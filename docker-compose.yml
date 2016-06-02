@@ -150,16 +150,14 @@ services:
 
 ### Add more Containers below ###############################
 
-#    mail-parser:
-#        image: philhardwick/documentally:email-0.0.1
-#        links:
-#            - nginx:http-api
+    mail-parser:
+        image: philhardwick/documentally:email-0.0.1
+        links:
+            - nginx:http-api
 #        volumes:
 #            - ./email-receiver:/config
-#        ports:
-#            - "8080:8080"
 
     api-docs:
-            build: ./swagger-docs
-            ports:
-                - "4000:80"
+        image: philhardwick/laradock_api-docs:latest
+        ports:
+            - "4000:80"
