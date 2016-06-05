@@ -17,7 +17,6 @@ RUN npm install -g http-server
 RUN apk del openssl
 
 ADD run.sh run.sh
-ADD swagger.json swagger.json
 
 # webserver port
 EXPOSE 80

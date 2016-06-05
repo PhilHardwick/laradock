@@ -71,6 +71,23 @@
                 }
             }
         },
+        "/auth/token/renew": {
+            "get": {
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Will send `Authenticated`"
+                    },
+                    "400": {
+                        "description": "Bad request, invalid data or missing data"
+                    }
+                }
+            }
+        },
         "/spaces": {
             "get": {
                 "security": [
