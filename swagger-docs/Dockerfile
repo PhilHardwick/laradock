@@ -5,7 +5,9 @@ ENV VERSION "v2.1.4"
 ENV FOLDER "swagger-ui-master"
 ENV API_URL "http://petstore.swagger.io/v2/swagger.json"
 ENV API_KEY "**None**"
-ENV SWAGGER_JSON "/app/swagger.json"
+ENV WORKING_DIR "/app"
+ENV REL_SWAGGER_JSON "swagger-configuration/swagger.json"
+ENV ABS_SWAGGER_JSON "/app/swagger-configuration/swagger.json"
 
 WORKDIR /app
 

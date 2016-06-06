@@ -160,6 +160,6 @@ services:
     api-docs:
         image: philhardwick/laradock_api-docs:latest
         volumes:
-            - ../documentally-config/docs/swagger.json:/app/swagger.json
+            - ../documentally-config/docs/swagger.json:/app/swagger-configuration/swagger.json
         ports:
             - "4000:80"
