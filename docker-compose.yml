@@ -154,12 +154,12 @@ services:
         image: philhardwick/documentally:email-0.0.1
         links:
             - nginx:http-api
-#        volumes:
-#            - ./email-receiver:/config
+        volumes:
+            - ../documentally-config/email:/config
 
     api-docs:
         image: philhardwick/laradock_api-docs:latest
         volumes:
-            - ../documentally-docs/swagger.json:/app/swagger.json
+            - ../documentally-config/docs/swagger.json:/app/swagger.json
         ports:
             - "4000:80"
