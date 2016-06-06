@@ -154,6 +154,10 @@ services:
         image: philhardwick/documentally:email-0.0.1
         links:
             - nginx:http-api
+        ports:
+            - "20001:20001"
+        environment:
+            HOST_NAME: 192.168.99.100
         volumes:
             - ../documentally-config/email:/config
 
