@@ -21,6 +21,7 @@ services:
         build: ./application
         volumes:
             - ../documentally-api:/var/www/laravel
+            - ../documentally-app:/var/www/web-ui
 
 ### Databases Data Container ################################
 
